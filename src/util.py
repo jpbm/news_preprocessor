@@ -8,7 +8,7 @@ from time import time
 from multiprocessing import Pool
 from numpy import random
 from inspect import getgeneratorstate
-
+import json
 
 def count_lines_one(filename):
     """counts the number of entries in a file"""
@@ -73,3 +73,28 @@ def data_from_many_slow(filenames,seed=42):
         except StopIteration:
             gens.pop(x)
             num_gens = len(gens)
+
+
+def unpack(item):
+    return tuple(json.loads(item).values())
+
+def words(x):
+    return len(x.split(' '))
+
+def bunch_paragraphs(paragraphs,target_length=300):
+    """bunches paragraphs into lenghts as close as possible to the target length. not global optimum."""
+    res = []
+    current = paragraphs.pop(0)
+    while len(paragraphs) > 0:
+        next_ = paragraphs.pop(0)
+        
+        len_current = words(current)
+        len_next_ = words(next_)
+        if (len_current+len_next_-target_length)**2 <= (len_current-target_length)**2:
+            current += ' '+next_
+        else:
+            res += [current]
+            current = next_
+    res += [current]
+    return res
+
