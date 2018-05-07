@@ -29,22 +29,30 @@ def count_many(filenames):
     return classes_
 
 if __name__ == "__main__":
-    for FOLDER in sys.argv[1:]:
+    if len(sys.argv[1:]) != 0:
+        folders=  sys.argv[1:]
+    else: 
+        folders = ['/datapool/news_articles/' + foldername for foldername in os.listdir('/datapool/news_articles/') if 'raw_data' not in foldername]
+    for FOLDER in folders:
         print("Generating summary for %s" % FOLDER)
-
-        filenames = [FOLDER + file for file in os.listdir(FOLDER) if 'json' in file]
+        FOLDER = '/'+FOLDER.strip('/') + '/'
+        filenames = [FOLDER + filename for filename in os.listdir(FOLDER) if 'json' in filename]
         total_count = 0
         sane_count = 0
 
         classes_ = count_many(filenames)
+
         from functools import reduce
         classes = reduce(lambda x,y: x+y, classes_)
+        
         print("Number of classes: %i" % len(classes))
-        with open('%s_summary.txt' % FOLDER,'w') as file:
-            file.write("Total classes: %i\n" % len(classes))
-            for item in sorted(list(classes.items()),key = lambda x: -x[1]):
-                file.write(json.dumps(item)+'\n')
-
-        print(sorted(list(classes.items()),key = lambda x: -x[1]))
+        log = open('%s_summary.txt' % FOLDER.strip('/').split('/')[-1],'w+')
+        log.write("Total classes: %i\n" % len(classes))
+        log.write("Total entries: %i\n" % sum([item[1] for item in classes.items()]))
+        for item in sorted(list(classes.items()),key = lambda x: -x[1]):
+            itemstr = json.dumps(item)
+            print("Item: %s" % itemstr)
+            log.write(itemstr+'\n')
+        log.flush()
+        log.close()
         print("Summary written")
-        del classes
