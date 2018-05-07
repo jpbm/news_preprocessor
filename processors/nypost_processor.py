@@ -37,12 +37,13 @@ def get_paragraphs(html):
     else:
         return 'NOCONTENT'
 
+label_re = re.compile('(?<="section":")[a-zA-Z0-9]*(?=")|(?<="articleSection":")[a-zA-Z0-9]*(?=")')
 def get_label(html):
-    label = BeautifulSoup(html,'html.parser').findAll('p')[0].get_text().strip('\n')
-    if len(label)> 0:
-        return label
-    else:
-        return "NOLABEL"    
+    try:
+        return label_re.search(html).group()
+    except:
+        return "NOLABEL"
+
 
 
 print("Writing data...")
