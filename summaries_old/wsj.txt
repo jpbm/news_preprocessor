@@ -1,0 +1,732 @@
+WSJ
+##################################################
+WORD COUNT: 22914862
+PARAGRAPH COUNT: 777932
+CLASSES: 
+Middle East News	1267
+Europe News	1169
+Essay	119
+World News	2096
+Capital Journal	144
+Africa News	260
+U.K. News	232
+Heard on the Street	2169
+Asia News	1196
+Russia News	148
+Latin America News	421
+Politics and Policy	4156
+Business	4532
+Olympics	195
+Personal Technology: Geoffrey Fowler	104
+Technology	3390
+U.S. News	2074
+European Business News	218
+The Saturday Essay	78
+Journal Reports: Wealth Management	242
+Autos	499
+Markets Main	3275
+NY Region	114
+Brussels Beat	116
+Music Review	68
+Financial Regulation	604
+Commodities	275
+Commentary (U.S.)	224
+U.S. Business News	14
+The Numbers	86
+Middle East Crossroads	138
+Pro Bankruptcy Bankruptcy	177
+Health Policy	506
+Film	97
+China News	438
+Magazine	336
+Consumer Technology	92
+Asia Economy	73
+New York	111
+Earnings	499
+WSJ Logistics Report	150
+Your Health	19
+Sports	89
+Today's Markets	269
+Best of the Web Today	30
+Oil Markets	304
+Pro VC New Money	40
+Journal Reports: College Rankings Highlights	80
+Asian Business News	272
+A-hed	479
+Life & Style	47
+Journal Reports: Leadership	394
+Personal Technology: Joanna Stern	101
+The Saturday Interview	53
+Personal Technology: Wilson Rothman	14
+China's World	76
+Central Banks	817
+U.S. Economy	37
+Film Review	195
+Television Review	102
+Bonds	59
+Keywords	113
+Education	115
+National Security	306
+Experiential	212
+Tax Report	83
+CFO Journal	92
+Canada News	141
+Bookshelf	82
+Economy Week Ahead	26
+NY Politics	181
+Private Properties	22
+Economy	258
+Journal Reports: Funds & ETFs	274
+Dance Review	38
+Health	173
+Rumble Seat	23
+Theory	2
+Management & Careers	112
+Media & Marketing	328
+Books	21
+Gas Markets	13
+Europe File	115
+Property Report	160
+Japan News	86
+Theater Review	96
+Capital Account	96
+Economic Data	501
+Europe Economy	134
+Pro Bankruptcy Distress	40
+CMO	309
+Streetwise	78
+Wonder Land	22
+Davos	80
+Precious Metals	8
+Masterpiece	51
+The Americas	22
+In Search Of	4
+Credit Markets	240
+NY Culture	40
+Boss Talk	18
+Advertising	16
+Global View	22
+Journal Reports: Conferences	79
+Moving Targets	16
+Journal Reports: Small Business	75
+Exhibition Review	50
+Arts & Entertainment	24
+20 Odd Questions	31
+Art Review	50
+The Outlook	108
+Ahead of the Tape	120
+Small Business	13
+CMO Today Newsletter	24
+The Middle Seat	75
+Journal Reports: Retirement	104
+Earnings Preview	22
+Notable & Quotable	52
+Journal Reports: Health Care	114
+Managing Your Career	1
+Opera Review	50
+Deals & Deal Makers	148
+Election 2016	173
+2014 Winter Olympics	20
+Stocks	27
+NBA	144
+India News	28
+China Circuit	100
+Wealth Management	85
+Homes	45
+Foreign Exchange	183
+Relative Values	4
+Street Moves	9
+College Basketball	38
+College Football	69
+Jason Gay	167
+Real Estate	35
+My Ride	17
+Exhibit	14
+Traveler's Tale	4
+Infogrfx Slide Show	23
+Asiastox	2
+Pro PE Exits	7
+Environment & Science	26
+IPOs	131
+ETFs	16
+Metro Money	4
+Journal Reports: Energy	54
+Copy Cat 	4
+Cultural Commentary	51
+Television	52
+Europe Markets	65
+NFL	106
+NY Mets	2
+Heard on the Field	5
+Elements	4
+Burning Question	12
+NY Transit	116
+Treasurys	14
+On Wine: Lettie Teague	16
+MLB	94
+Vancouver Olympics	1
+Law	53
+Half Full	7
+General News	26
+Pro VC Industry News	11
+Weekend Investor	23
+Historically Speaking	16
+Tech Center Main	5
+Review & Outlook (U.S.)	118
+Journal Reports: College Rankings	26
+Leader (U.S.)	25
+Wilczek's Universe	8
+Political Economics	24
+Pro VC Commentary Analysis	12
+Food & Drink	52
+NY Real Estate Commercial	51
+Heart Beat	2
+Fashion	76
+Everyday Math	8
+Inside View	22
+Hedge Funds	18
+Americas Business News	2
+Central Banks Commentary	8
+Obituaries	28
+Pro VC Shutdowns	4
+Letters	64
+Jumbo Jungle	10
+Major Business News	8
+Personal Technology: David Pierce	18
+Pharmalot	3
+Golf Journal	3
+Travel	4
+Word on the Street	14
+Journal Concierge	5
+Playlist	14
+NY Crime	67
+Weekend Confidential	24
+Off Duty Travel	38
+Pro Cyber Commentary & Analysis	4
+Music	27
+Creating	1
+Upward Mobility	22
+World News NoCo	7
+Slow Food Fast	16
+Inside Story	7
+Pro VC VC Funds	9
+Business Schools	18
+Graphics Template	3
+Declarations	24
+On Trend	16
+The Future of Everything	75
+Design	14
+Main Street	22
+Potomac Watch	20
+Wealth Management Journal	22
+Personal Technology: Review	30
+Work & Family	54
+Gear	38
+JR: Small Business	2
+Take Monday Off	6
+Gadgets	4
+My Tech Essentials	14
+That's Debatable	6
+NY Knicks	2
+Pro PE Deals	12
+Pro VC MA IPOs	12
+Hong Kong News	5
+The Market	2
+Health Journal	3
+Heaven & Earth	1
+Mind and Matter: Susan Pinker	4
+Remembrances	5
+Health & Wellness	17
+IPO	1
+Tennis	12
+Mind & Matter	14
+Management	13
+The Count	8
+Politics & Ideas	22
+Opinion Europe	5
+Guru	2
+Politics & Policy	4
+Architecture	2
+Only In	2
+Will Lyons on Wine	2
+Fitness	2
+Who's News	2
+House Call	8
+In the Lead	1
+Art	20
+Commercial Real Estate	6
+ABC	6
+Al's Emporium	1
+Asia Technology	9
+Journal Reports: Tech Companies to Watch	16
+Art & Auctions	10
+Border Lands	2
+NY Lunch Box	2
+MoneyBeat	5
+Cross Country	4
+Special Report D	1
+Leader	4
+San Francisco Bay Area	1
+NY AP Top News	8
+Breakfast 2.0	2
+Plots & Ploys	4
+Houses of Worship	4
+Fresh Picks	4
+Pro VC Snapshot	1
+Options	6
+null	8
+Who's News Briefs	1
+Careers	1
+Your Money	11
+NY Schools	16
+Financial Inclusion	2
+Sightings	2
+Sites & Sightings	4
+Abreast of the Market	9
+Commentary	1
+World-Wide	3
+Pro PE Restructuring Bankruptcy	5
+Business and Finance	6
+Business World	6
+The Game	2
+Tech Journal Asia	1
+NY Heard & Scene	6
+Accidental Entrepreneur	2
+Americas News	1
+Beige Book Report	1
+Pro Bankruptcy Commentary Analysis	2
+DJFX Trader	1
+Soccer	17
+Fund Track	1
+Uncorking the City	2
+Science Journal	1
+In the Lab	2
+WSJ Logistics Report Newsletter	18
+How To	2
+East is East	2
+Your Executive Career	6
+House Tour	4
+Pepper & Salt	2
+Corrections	2
+E-Commerce	1
+Fashion Journal	3
+Pro PE Announcements	5
+In My Kitchen	2
+Real Estate Newsletter	1
+Five Best	3
+Pro PE Industry News	2
+What's Your Workout	11
+At Leisure Main	1
+New Securities Issues	2
+Executives on Trial	1
+DN Wire	1
+Me & My Car	1
+Law Journal	1
+Book Excerpt	1
+Central Banks Research	2
+Tech Stocks Main	1
+Pro VC Partnerships	1
+NewsPlus	1
+Pro PE Fund News	10
+Icons	14
+Special Page: Front	1
+Pro PE Commentary Analysis	1
+Blog: Business	2
+Mind and Matter: Alison Gopnik	4
+WSJ.Money	2
+Infogrfx House Of The Day	6
+NY Food	2
+Best Selling Books	1
+What They Know	1
+WSJE	1
+The Fixer	3
+Telecommunications	1
+JR: Encore 6	1
+The Numbers Guy	1
+War on Terror	1
+JR: Tech Innov Awards	1
+Special Report O	1
+JR: Next	1
+News & Trends	1
+Business Technology	1
+Anatomy of a Song	1
+Pro Bankruptcy High Yield	1
+Frontier Markets	1
+Personal Technology	1
+The Business	1
+NY Sports	1
+
+
+SUBCLASSES: 
+Middle East News	1267
+Europe News	1169
+Essay	119
+World News	2096
+Capital Journal	144
+Africa News	260
+U.K. News	232
+Heard on the Street	2169
+Asia News	1196
+Russia News	148
+Latin America News	421
+Politics and Policy	4156
+Business	4532
+Olympics	195
+Personal Technology: Geoffrey Fowler	104
+Technology	3390
+U.S. News	2074
+European Business News	218
+The Saturday Essay	78
+Journal Reports: Wealth Management	242
+Autos	492
+Markets Main	3275
+NY Region	114
+Brussels Beat	116
+Music Review	68
+Financial Regulation	604
+Commodities	275
+Commentary (U.S.)	224
+U.S. Business News	14
+The Numbers	86
+Middle East Crossroads	138
+Pro Bankruptcy Bankruptcy	177
+Health Policy	506
+Film	97
+China News	438
+Magazine/Feature	28
+Consumer Technology	92
+Asia Economy	73
+New York	111
+Earnings	499
+WSJ Logistics Report	150
+Your Health	19
+Sports	71
+Today's Markets	269
+Best of the Web Today	30
+Oil Markets	304
+Pro VC New Money	40
+Journal Reports: College Rankings Highlights	80
+Asian Business News	272
+A-hed	479
+Life & Style	47
+Journal Reports: Leadership	394
+Personal Technology: Joanna Stern	101
+The Saturday Interview	53
+Personal Technology: Wilson Rothman	14
+China's World	76
+Central Banks	817
+U.S. Economy	37
+Film Review	195
+Television Review	102
+Bonds	59
+Keywords	113
+Education	115
+National Security	306
+Experiential	212
+Tax Report	83
+CFO Journal	92
+Canada News	141
+Bookshelf	82
+Economy Week Ahead	26
+NY Politics	181
+Private Properties	22
+Economy	258
+Journal Reports: Funds & ETFs	274
+Magazine/What's News	70
+Dance Review	38
+Health	173
+Rumble Seat	23
+Theory	2
+Management & Careers	112
+Media & Marketing	328
+Books	21
+Gas Markets	13
+Europe File	115
+Property Report	160
+Japan News	86
+Theater Review	96
+Capital Account	96
+Economic Data	501
+Europe Economy	134
+Pro Bankruptcy Distress	40
+CMO	309
+Streetwise	78
+Wonder Land	22
+Davos	80
+Precious Metals	8
+Masterpiece	51
+The Americas	22
+In Search Of	4
+Credit Markets	240
+NY Culture	40
+Boss Talk	18
+Advertising	16
+Global View	22
+Journal Reports: Conferences	79
+Moving Targets	16
+Magazine/WSJ. Magazine	30
+Journal Reports: Small Business	75
+Exhibition Review	50
+Arts & Entertainment	24
+20 Odd Questions	31
+Magazine/Food	10
+Art Review	50
+The Outlook	108
+Ahead of the Tape	120
+Small Business	13
+CMO Today Newsletter	24
+The Middle Seat	75
+Journal Reports: Retirement	104
+Earnings Preview	22
+Notable & Quotable	52
+Journal Reports: Health Care	114
+Managing Your Career	1
+Opera Review	50
+Deals & Deal Makers	148
+Election 2016	173
+2014 Winter Olympics	20
+Stocks	27
+NBA	144
+Magazine/Culture	30
+India News	28
+China Circuit	100
+Wealth Management	85
+Homes	45
+Foreign Exchange	183
+Relative Values	4
+Street Moves	9
+College Basketball	38
+College Football	69
+Jason Gay	167
+Real Estate	35
+My Ride	17
+Exhibit	14
+Traveler's Tale	4
+Infogrfx Slide Show	23
+Asiastox	2
+Pro PE Exits	7
+Environment & Science	26
+IPOs	131
+ETFs	16
+Metro Money	4
+Journal Reports: Energy	54
+Copy Cat 	4
+Cultural Commentary	51
+Television	52
+Europe Markets	65
+NFL	106
+NY Mets	2
+Heard on the Field	5
+Elements	4
+Burning Question	12
+NY Transit	116
+Treasurys	14
+On Wine: Lettie Teague	16
+MLB	94
+Vancouver Olympics	1
+Law	53
+Half Full	7
+General News	26
+Pro VC Industry News	11
+Weekend Investor	23
+Historically Speaking	16
+Tech Center Main	5
+Review & Outlook (U.S.)	118
+Journal Reports: College Rankings	26
+Leader (U.S.)	25
+Wilczek's Universe	8
+Political Economics	24
+Pro VC Commentary Analysis	12
+Food & Drink	52
+NY Real Estate Commercial	51
+Heart Beat	2
+Fashion	76
+Everyday Math	8
+Inside View	22
+Hedge Funds	18
+Americas Business News	2
+Central Banks Commentary	8
+Obituaries	28
+Pro VC Shutdowns	4
+Letters	64
+Jumbo Jungle	10
+Major Business News	8
+Personal Technology: David Pierce	18
+Pharmalot	3
+Golf Journal	3
+Travel	4
+Word on the Street	14
+Journal Concierge	5
+Playlist	14
+NY Crime	67
+Weekend Confidential	24
+Off Duty Travel	38
+Pro Cyber Commentary & Analysis	4
+Music	27
+Creating	1
+Upward Mobility	22
+World News NoCo	7
+Slow Food Fast	16
+Inside Story	7
+Pro VC VC Funds	9
+Business Schools	18
+Graphics Template	3
+Declarations	24
+On Trend	16
+The Future of Everything	75
+Design	14
+Main Street	22
+Magazine/Fashion	47
+Magazine/Tracked	17
+Potomac Watch	20
+Wealth Management Journal	22
+Personal Technology: Review	30
+Work & Family	54
+Gear	38
+JR: Small Business	2
+Magazine/On The Cover	4
+Take Monday Off	6
+Gadgets	4
+Magazine/Design	44
+My Tech Essentials	14
+That's Debatable	6
+Sports/Golf	18
+NY Knicks	2
+Pro PE Deals	12
+Pro VC MA IPOs	12
+Hong Kong News	5
+Magazine/Still Life	12
+Magazine/Soapbox	13
+The Market	2
+Health Journal	3
+Heaven & Earth	1
+Mind and Matter: Susan Pinker	4
+Remembrances	5
+Health & Wellness	17
+IPO	1
+Tennis	12
+Mind & Matter	14
+Management	13
+The Count	8
+Politics & Ideas	22
+Opinion Europe	5
+Guru	2
+Politics & Policy	4
+Architecture	2
+Only In	2
+Will Lyons on Wine	2
+Fitness	2
+Who's News	2
+House Call	8
+In the Lead	1
+Art	20
+Commercial Real Estate	6
+ABC	6
+Al's Emporium	1
+Asia Technology	9
+Journal Reports: Tech Companies to Watch	16
+Art & Auctions	10
+Border Lands	2
+NY Lunch Box	2
+MoneyBeat	5
+Cross Country	4
+Special Report D/Other	1
+Leader	4
+San Francisco Bay Area	1
+NY AP Top News	8
+Breakfast 2.0	2
+Plots & Ploys	4
+Houses of Worship	4
+Fresh Picks	4
+Pro VC Snapshot	1
+Options	6
+null	8
+Who's News Briefs	1
+Careers	1
+Your Money	11
+NY Schools	16
+Financial Inclusion	2
+Sightings	2
+Sites & Sightings	4
+Abreast of the Market	9
+Commentary	1
+World-Wide	3
+Pro PE Restructuring Bankruptcy	5
+Autos/Industry	7
+Business and Finance/Asia	4
+Business World	6
+The Game	2
+Tech Journal Asia	1
+NY Heard & Scene	6
+Accidental Entrepreneur	2
+Americas News	1
+Beige Book Report	1
+Pro Bankruptcy Commentary Analysis	2
+DJFX Trader	1
+Soccer	17
+Fund Track	1
+Uncorking the City	2
+Science Journal	1
+In the Lab	2
+WSJ Logistics Report Newsletter	18
+Magazine/Travel	10
+How To	2
+Magazine/Contributors	10
+Magazine/Partnership	1
+East is East	2
+Your Executive Career	6
+House Tour	4
+Magazine/Editor's Letter	8
+Magazine/Cult of	2
+Pepper & Salt	2
+Corrections	2
+E-Commerce	1
+Fashion Journal	3
+Pro PE Announcements	5
+In My Kitchen	2
+Real Estate Newsletter	1
+Five Best	3
+Pro PE Industry News	2
+What's Your Workout	11
+At Leisure Main	1
+New Securities Issues	2
+Executives on Trial	1
+Business and Finance/Europe	2
+DN Wire	1
+Me & My Car	1
+Law Journal	1
+Book Excerpt	1
+Central Banks Research	2
+Tech Stocks Main	1
+Pro VC Partnerships	1
+NewsPlus	1
+Pro PE Fund News	10
+Icons	14
+Special Page: Front	1
+Pro PE Commentary Analysis	1
+Blog: Business	2
+Mind and Matter: Alison Gopnik	4
+WSJ.Money	2
+Infogrfx House Of The Day	6
+NY Food	2
+Best Selling Books	1
+What They Know	1
+WSJE	1
+The Fixer	3
+Telecommunications	1
+JR: Encore 6/04	1
+The Numbers Guy	1
+War on Terror	1
+JR: Tech Innov Awards	1
+Special Report O/Main	1
+JR: Next	1
+News & Trends	1
+Business Technology	1
+Anatomy of a Song	1
+Pro Bankruptcy High Yield	1
+Frontier Markets	1
+Personal Technology	1
+The Business	1
+NY Sports	1
+
+
