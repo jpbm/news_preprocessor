@@ -34,25 +34,28 @@ if __name__ == "__main__":
     else: 
         folders = ['/datapool/news_articles/' + foldername for foldername in os.listdir('/datapool/news_articles/') if 'raw_data' not in foldername]
     for FOLDER in folders:
-        print("Generating summary for %s" % FOLDER)
-        FOLDER = '/'+FOLDER.strip('/') + '/'
-        filenames = [FOLDER + filename for filename in os.listdir(FOLDER) if 'json' in filename]
-        total_count = 0
-        sane_count = 0
+        try:
+            print("Generating summary for %s" % FOLDER)
+            FOLDER = '/'+FOLDER.strip('/') + '/'
+            filenames = [FOLDER + filename for filename in os.listdir(FOLDER) if 'json' in filename]
+            total_count = 0
+            sane_count = 0
 
-        classes_ = count_many(filenames)
+            classes_ = count_many(filenames)
 
-        from functools import reduce
-        classes = reduce(lambda x,y: x+y, classes_)
-        
-        print("Number of classes: %i" % len(classes))
-        log = open('%s_summary.txt' % FOLDER.strip('/').split('/')[-1],'w+')
-        log.write("Total classes: %i\n" % len(classes))
-        log.write("Total entries: %i\n" % sum([item[1] for item in classes.items()]))
-        for item in sorted(list(classes.items()),key = lambda x: -x[1]):
-            itemstr = json.dumps(item)
-            print("Item: %s" % itemstr)
-            log.write(itemstr+'\n')
-        log.flush()
-        log.close()
-        print("Summary written")
+            from functools import reduce
+            classes = reduce(lambda x,y: x+y, classes_)
+            
+            print("Number of classes: %i" % len(classes))
+            log = open('%s_summary.txt' % FOLDER.strip('/').split('/')[-1],'w+')
+            log.write("Total classes: %i\n" % len(classes))
+            log.write("Total entries: %i\n" % sum([item[1] for item in classes.items()]))
+            for item in sorted(list(classes.items()),key = lambda x: -x[1]):
+                itemstr = json.dumps(item)
+                print("Item: %s" % itemstr)
+                log.write(itemstr+'\n')
+            log.flush()
+            log.close()
+            print("Summary written")
+        except:
+            print('Could not write summary for folder %s' % FOLDER)
