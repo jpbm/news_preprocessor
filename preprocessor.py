@@ -54,8 +54,8 @@ def get_paragraphs(html):
         return 'NOCONTENT'
 
 
-nytimes_url_label_re = re.compile('(?<=https://www.nytimes.com/[12][0-9][0-9][0-9]/[0-1][0-9]/[0-3][0-9]/).*')
-usatoday_url_label_re = re.compile('(?<=https://www.usatoday.com/).*(?=/[12][0-9][0-9][0-9])')
+nytimes_url_label_re = re.compile('(?<=nytimes.com/[12][0-9][0-9][0-9]/[0-1][0-9]/[0-3][0-9]/).*')
+usatoday_url_label_re = re.compile('(?<=usatoday.com/)[a-zA-Z/]*(?=/[12][0-9])|[a-zA-Z-]*[^w](?=[.]usatoday[.]com)')
 
 def get_url_label(url):
     if 'nytimes.com' in url:
@@ -67,16 +67,16 @@ def get_url_label(url):
 
 label_re = re.compile('(?<=<meta name="prism.section" content=")[^"]*(?=">)')
 def get_label(url,html):
-    soup = BeautifulSoup(html,'html.parser')
-    regex_label = label_re.findall(html) #[item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'article:section']
+    #soup = BeautifulSoup(html,'html.parser')
+    #regex_label = label_re.findall(html) #[item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'article:section']
     url_label = get_url_label(url)
-    soup_label_0 = [item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'article:section' or item['property'] =='og:section']
-    soup_label_1 = [item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'og:site_name']
-    label = regex_label + soup_label_0 + url_label + soup_label_1
+    #soup_label_0 = [item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'article:section' or item['property'] =='og:section']
+    #soup_label_1 = [item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'og:site_name']
+    label = url_label #+ regex_label + soup_label_0 + soup_label_1
     if len(label) != 0:
         return label[0]
     else:
-        print('NOLABEL')
+        print('NOLABEL %s' %url )
         return 'NOLABEL'
 
 print("Writing data...")
