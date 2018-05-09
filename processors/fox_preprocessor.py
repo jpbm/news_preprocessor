@@ -9,8 +9,8 @@ from bs4 import BeautifulSoup
 import os
 from src.util import count_lines_many, data_from_many, bunch_paragraphs, unpack
 
-DATAPATH = '/datapool/news_articles/raw_data/fox/'
-DESTFILE = '/datapool/news_articles/fox/fox.json'
+DATAPATH = '/datapool/news_articles/raw_data/foxnews/'
+DESTFILE = '/datapool/news_articles/foxnews/foxnews.json'
 MAX_PER_FILE = 1000
 
 """GENERAL"""
@@ -45,9 +45,9 @@ def get_paragraphs(html):
 label_re = re.compile('(?<=<meta name="prism.section" content=")[^"]*(?=">)')
 def get_label(html):
     soup = BeautifulSoup(html,'html.parser')
-    label = label_re.search(html).group() #[item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'article:section']
+    label = label_re.findall(html) #[item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'article:section']
     if len(label) != 0:
-        return label
+        return label[0]
     else:
         print('NOLABEL')
         return 'NOLABEL'
