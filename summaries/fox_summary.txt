@@ -1,8 +1,0 @@
-Total classes: 6
-Total entries: 79
-["transcript", 39]
-["politics", 27]
-["us", 6]
-["auto", 3]
-["food-drink", 3]
-["entertainment", 1]
