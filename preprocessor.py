@@ -1,16 +1,32 @@
+"""
+PARAGRAPH + LABEL EXTRACTION
+
+Paths are configured for current setup on toymaker.
+
+Tested for:
+    nytimes
+    usatoday
+    foxnews
+    theonion
+    buzzfeed
+    nypost
+    nydailynews
+    washingtonpost
+    wsj
+
+
+
+"""
+
+
 import json
 import sys
-sys.path.append('../')
-sys.path.append('~/waxonwaxoff')
-sys.path.append('/')
-
 import re
 from bs4 import BeautifulSoup
 import os
 from src.util import count_lines_many, data_from_many, bunch_paragraphs, unpack
 
 
-#print(sys.argv)
 FN = sys.argv[1].split('.')[1]
 DATAPATH = '/datapool/news_articles/raw_data/'+FN+'/'
 DESTFILE = '/datapool/news_articles/'+FN+'/'+FN+'.json'
@@ -32,7 +48,7 @@ datafiles = [DATAPATH + file for file in os.listdir(DATAPATH)]
 print("Number of entries: %i" % (count_lines_many(datafiles)))
 
 
-"""ATTEMPTED GENERAL"""
+"""PREPROCESS AND PARAGRAPH EXTRACTION"""
 
 def preprocess(item):
     url, html = unpack(item)
@@ -53,31 +69,75 @@ def get_paragraphs(html):
         print("NOCONTENT")
         return 'NOCONTENT'
 
+"""LABEL EXTRACTION"""
 
 nytimes_url_label_re = re.compile('(?<=nytimes.com/[12][0-9][0-9][0-9]/[0-1][0-9]/[0-3][0-9]/).*')
 usatoday_url_label_re = re.compile('(?<=usatoday.com/)[a-zA-Z/]*(?=/[12][0-9])|[a-zA-Z-]*[^w](?=[.]usatoday[.]com)')
 
 def get_url_label(url):
     if 'nytimes.com' in url:
-        return ['/'.join(nytimes_url_label_re.search(url).group().split('/')[:-1])]
-    elif 'usatoday' in url:
-        return usatoday_url_label_re.findall(url)
-    else:
-        return []
+        try:
+            return ['/'.join(nytimes_url_label_re.search(url).group().split('/')[:-1])]
+        except:
+            pass
+        
+    if 'usatoday' in url:
+        try:
+            return usatoday_url_label_re.findall(url)
+        except:
+            pass
 
-label_re = re.compile('(?<=<meta name="prism.section" content=")[^"]*(?=">)')
+    if 'theonion' in url:
+        return url.replace('www.','').split('//')[-1].split('.')[0]
+
+    if 'metro' in url:
+        try:
+            return '/'.join(url.replace('//','').split('/')[1:-1])
+        except:
+            pass
+
+    return 'NOLABEL'
+
+
+fox_label_re = re.compile('(?<=<meta name="prism.section" content=")[^"]*(?=">)')
+wsj_label_re = re.compile('(?<=<meta name="article.type" content=").*(?=" />)')
+
+
+def get_html_label(url,html):
+    if 'foxnews' in url:
+        try:
+            return fox_label_re.search(html).group()
+        except:
+            pass
+
+    if 'wsj' in url:
+        try:
+            return '/'.join(wsj_label_re.search(html).group().split(' - '))
+        except:
+            pass
+
+    return 'NOLABEL'
+
+
 def get_label(url,html):
-    #soup = BeautifulSoup(html,'html.parser')
-    #regex_label = label_re.findall(html) #[item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'article:section']
-    url_label = get_url_label(url)
-    #soup_label_0 = [item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'article:section' or item['property'] =='og:section']
-    #soup_label_1 = [item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'og:site_name']
-    label = url_label #+ regex_label + soup_label_0 + soup_label_1
+    for item in 'nytimes,usatoday,theonion,metro'.split(','):
+        if item in url:
+            return get_url_label(url)
+            break
+    
+    for item in 'foxnews,wsj'.split(','):
+        if item in url:
+            return get_html_label(url,html)
+            break
+
+
+    soup = BeautifulSoup(html,'html.parser')
+    soup_label = [item['content'] for item in soup.findAll('meta',content=True,property=True) if item['property'] == 'article:section' or item['property'] =='og:section']
     if len(label) != 0:
         return label[0]
     else:
-        print('NOLABEL %s' %url )
         return 'NOLABEL'
+
 
 print("Writing data...")
 if __name__ == "__main__":

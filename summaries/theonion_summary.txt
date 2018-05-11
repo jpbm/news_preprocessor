@@ -1,7 +1,8 @@
-Total classes: 5
-Total entries: 16339
-["The Onion", 11626]
-["Sports", 1450]
-["Local", 1360]
-["Politics", 1342]
-["Entertainment", 561]
+Total classes: 6
+Total entries: 26081
+["theonion", 12688]
+["local", 3963]
+["sports", 3820]
+["politics", 3369]
+["entertainment", 2237]
+["t", 4]
