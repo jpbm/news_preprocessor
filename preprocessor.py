@@ -27,27 +27,6 @@ import os
 from src.util import count_lines_many, data_from_many, bunch_paragraphs, unpack
 
 
-FN = sys.argv[1].split('.')[1]
-DATAPATH = '/datapool/news_articles/raw_data/'+FN+'/'
-DESTFILE = '/datapool/news_articles/'+FN+'/'+FN+'.json'
-MAX_PER_FILE = 1000
-
-print(FN)
-print(DATAPATH)
-print(DESTFILE)
-try:
-    os.mkdir('/datapool/news_articles/'+FN)
-except:
-    pass
-
-"""GENERAL"""
-
-print("running...")
-print("Counting number of entries...")
-datafiles = [DATAPATH + file for file in os.listdir(DATAPATH)]
-print("Number of entries: %i" % (count_lines_many(datafiles)))
-
-
 """PREPROCESS AND PARAGRAPH EXTRACTION"""
 
 def preprocess(item):
@@ -139,8 +118,26 @@ def get_label(url,html):
         return 'NOLABEL'
 
 
-print("Writing data...")
 if __name__ == "__main__":
+    FN = sys.argv[1].split('.')[1]
+    DATAPATH = '/datapool/news_articles/raw_data/'+FN+'/'
+    DESTFILE = '/datapool/news_articles/'+FN+'/'+FN+'.json'
+    MAX_PER_FILE = 1000
+
+    print(FN)
+    print(DATAPATH)
+    print(DESTFILE)
+    try:
+        os.mkdir('/datapool/news_articles/'+FN)
+    except:
+            pass
+
+    print("running...")
+    print("Counting number of entries...")
+    datafiles = [DATAPATH + file for file in os.listdir(DATAPATH)]
+    print("Number of entries: %i" % (count_lines_many(datafiles)))
+
+
     data = map(preprocess,data_from_many(datafiles))
     #print("data generator created")    
     i = 0
